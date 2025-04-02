@@ -1,0 +1,29 @@
+<h1>Directives in the angular</h1>
+
+<h2>Structural Directives</h2>
+
+<h3>---ngIf---</h3>
+
+<button (click)="showHideFunc()">{{buttonName}}</button>
+
+<br>
+<p *ngIf="isDisplay" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos explicabo facere nihil eum! Optio eaque ipsum, doloremque dolores earum neque nostrum eius illum adipisci, quasi numquam ullam. Commodi dolorem tenetur unde cum pariatur recusandae sequi, reiciendis nesciunt ipsam nam velit ab? Reiciendis maxime quis iusto quae pariatur dolore! Autem, minima.</p>
+
+<br><br>
+
+<table border="1" *ngIf="students.length>0">
+<thead>
+    <th>id</th>
+    <th>name</th>
+    <th>age</th>
+</thead>
+
+<tbody *ngFor="let s of students">
+    <tr *ngIf="s.age>22">
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.age}}</td>
+    </tr>
+</tbody>
+
+</table>
